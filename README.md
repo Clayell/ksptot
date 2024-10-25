@@ -1,7 +1,7 @@
 # KSP Trajectory Optimization Tool 
 The KSP Trajectory Optimization Tool (KSPTOT) is a stand-alone, MATLAB-based software toolkit for advanced KSP pilots and astrodynamicists.  Contained within this suite are tools for end-to-end spacecraft and launch vehicle mission design, gravity assist maneuver design, rendezvous maneuver design, celestial body data, and more.
 ###### KSPTOT runs via the MATLAB Compiler Runtime.  Ownership of MATLAB is not required to use KSPTOT.
-![Launch Vehicle Designer](https://i.imgur.com/payZQHR.png)
+![Launch Vehicle Designer](https://i.imgur.com/gzom2yV.png)
 ## Included Tools & Features
 KSPTOT contains the following software tools:
 

@@ -9,10 +9,10 @@ function [rVect,vVect] = getAbsPositBetweenSpacecraftAndBody_fast(time, rVectSC,
 %         vVectSC(3,1) double = NaN(3,1);
 %     end 
 
-    [rVectBodySC, vVectBodySC] = getPositOfBodyWRTSun_alg_fast(time, bodyScChain{:});
+    [rVectBodySC, vVectBodySC] = getPositOfBodyWRTSun_alg_fast(time, bodyScChain{1:8});
     rVectSCTot = bsxfun(@plus, rVectBodySC, rVectSC);
 
-    [rVectB, vVectB] = getPositOfBodyWRTSun_alg_fast(time, bodyOtherChain{:});
+    [rVectB, vVectB] = getPositOfBodyWRTSun_alg_fast(time, bodyOtherChain{1:8});
     rVect = bsxfun(@minus, rVectB, rVectSCTot);
 
     if(not(all(isnan(vVectSC))))

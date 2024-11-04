@@ -14,17 +14,23 @@ classdef Gravity3rdBodyForceModel < AbstractForceModel
         
         function [forceVect, tankMdots, ecStgDots] = getForce(obj, ut, rVectSC, vVectSC, mass, bodySC, ~, ~, ~, ~, ~, ~, ~, ~, grav3Body, ~, ~, ~, ~)      
             bodyScFrame = bodySC.getBodyCenteredInertialFrame();
+            bodyScFrameOriginChain = bodyScFrame.getOriginBody().getOrbitElemsChain();
             
             bodies = grav3Body.bodies;
             bodies = bodies(bodies ~= bodySC);
+
+            bodySCChain = bodySC.getOrbitElemsChain();
             
             forceVect = [0;0;0]; 
             for(i=1:length(bodies)) %#ok<*NO4LP> 
                 bodyInfoJ = bodies(i);
+                bodyInfoJChain = bodyInfoJ.getOrbitElemsChain();
 
-                [r_sat_to_j,~] = getAbsPositBetweenSpacecraftAndBody(ut, rVectSC, bodySC, bodyInfoJ, bodyInfoJ.celBodyData);
+                % [r_sat_to_j,~] = getAbsPositBetweenSpacecraftAndBody(ut, rVectSC, bodySC, bodyInfoJ, bodyInfoJ.celBodyData);
+                r_sat_to_j =          getAbsPositBetweenSpacecraftAndBody_fast_mex(ut, rVectSC, bodySCChain, bodyInfoJChain, NaN(size(rVectSC)));
 
-                [r_1_to_j,~] = getAbsPositBetweenSpacecraftAndBody(ut, [0;0;0], bodyScFrame.getOriginBody(), bodyInfoJ, bodyInfoJ.celBodyData);
+                % [r_1_to_j,~] = getAbsPositBetweenSpacecraftAndBody(ut, [0;0;0], bodyScFrame.getOriginBody(), bodyInfoJ, bodyInfoJ.celBodyData);
+                r_1_to_j =          getAbsPositBetweenSpacecraftAndBody_fast_mex(ut, [0;0;0], bodyScFrameOriginChain, bodyInfoJChain, NaN(3,1));
 
                 if(norm(r_sat_to_j) > 0)
                     term1 = r_sat_to_j/norm(r_sat_to_j)^3;  %km/km^3 = km^-2

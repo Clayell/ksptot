@@ -14,7 +14,7 @@ KSPTOT contains the following software tools:
 
 ## Download & Installation Instructions
 #### To install and run KSPTOT on **Windows**, do the following:
-1.  Download the [Windows 64-bit 2022a MATLAB Compiler Runtime (MCR)](https://www.mathworks.com/products/compiler/matlab-runtime.html).
+1.  Download the [Windows 64-bit R2023b MATLAB Compiler Runtime (MCR)](https://www.mathworks.com/products/compiler/matlab-runtime.html).
 2.  Install the MCR package on your computer. **You may need to restart your PC after installing in order to use KSPTOT.**
 3.  **Download the KSPTOT package.
 4.  Unzip the KSPTOT package to a directory of your choosing.

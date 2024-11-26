@@ -24,16 +24,16 @@ KSPTOT contains the following software tools:
 8.  To update from a previous version, just repeat steps 3-6. There is no need to re-download the MCR.
 #### **Mac/Linux Users: Follow these instructions instead.**
 1.  (Mac only): [Download VirtualBox for OS X hosts.](https://www.virtualbox.org/wiki/Downloads) Install according to the VirtualBox instructions. Setup and install a distribution of Linux as a virtual machine within VirtualBox. (Ex: [Ubuntu](https://www.ubuntu.com/download/desktop)) All instructions from here on down will reference the virtual machine and it's Linux operating system, not the Mac system.
-2.  Download the [Linux 64-bit 2022a MATLAB Compiler Runtime (MCR).](https://www.mathworks.com/products/compiler/matlab-runtime.html)
+2.  Download the [Linux 64-bit R2023b MATLAB Compiler Runtime (MCR).](https://www.mathworks.com/products/compiler/matlab-runtime.html)
 3.  Install the MCR package on your computer. **You may need to restart your PC after installing in order to use KSPTOT.**
-    1.  You MUST install the MCR to **"/usr/local/MATLAB/R2022a/"!** The software will not work correctly if this is not done.
+    1.  You MUST install the MCR to **"/usr/local/MATLAB/R2023b/"!** The software will not work correctly if this is not done.
 4.  **Download the KSPTOT Package.**
 5.  Unzip the KSPTOT package to a directory of your choosing.
 6.  Set the execution bit on the run script and the executable itself. Using the following console command:
     1.  _chmod +x run_KSPTrajectoryOptimizationTool.sh KSPTrajectoryOptimizationTool_
 7.  **Copy the KSPTOTConnect folder to your KSP Gamedata folder**.
 8.  **Copy the Ships folder to your KSP folder** (if you use kOS).
-9.  From within the directory where you unpacked KSPTOT, run "**./run_KSPTrajectoryOptimizationTool.sh /usr/local/MATLAB/R2022a/**" to launch KSPTOT.
+9.  From within the directory where you unpacked KSPTOT, run "**./run_KSPTrajectoryOptimizationTool.sh /usr/local/MATLAB/R2023b/**" to launch KSPTOT.
 10.  To update from a previous version, just repeat steps 4-6. There is no need to re-download the MCR.
 11.  For addition detail, see [here](https://finitemonkeys.org/ksptot_on_linux).  
 ## Buy Me a Coffee
